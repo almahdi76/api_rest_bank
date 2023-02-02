@@ -1,0 +1,15 @@
+type Query{
+    accountList : [BankAccount]
+}
+
+type BankAccount {
+    id : String,
+    createdAt : Float,
+    balance : Float,
+    currency : String,
+    type : TypeAccount
+}
+enum TypeAccount {
+    CURRENT_ACCOUNT,SAVING_ACCOUNT
+
+}
