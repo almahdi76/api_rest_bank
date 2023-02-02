@@ -6,7 +6,8 @@ import com.afpa.accountbankservice.repositories.BankAccountRepo;
 import com.afpa.accountbankservice.service.BankAccountService;
 import lombok.AllArgsConstructor;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.*;
+import org.slf4j.Logger;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,11 +19,12 @@ import java.util.List;
 @Slf4j
 public class AccountRestController {
     private BankAccountService bankAccountService;
-    private BankAccountRepo bankAccountRepo;
+
 
     @GetMapping
     public List<BankAccountResponseDTO> getAllAccount(){
         log.info("\n\n \t METHODE RETURN ALL ACCOUNTS");
+
        return bankAccountService.findAllAccount();
     }
 
